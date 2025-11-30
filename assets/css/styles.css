@@ -198,7 +198,9 @@ body {
   padding: 26px;
   border: 1px solid var(--border);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
-  transition: transform 200ms ease, border-color 200ms ease;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: transform 220ms ease, border-color 200ms ease, opacity 220ms ease;
 }
 
 .project-card:hover {
@@ -263,6 +265,11 @@ body {
 .project-card__links a:hover {
   border-color: var(--accent);
   background: rgba(165, 255, 203, 0.1);
+}
+
+.project-card--visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .capabilities__grid {

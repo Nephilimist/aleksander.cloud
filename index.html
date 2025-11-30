@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -58,7 +59,7 @@
         <section id="projects" class="projects">
           <div class="section-heading">
             <p>Selected projects</p>
-            <h2>Featured WordPress build</h2>
+            <h2>Featured WordPress builds</h2>
           </div>
           <div class="project-grid">
             <article class="project-card">
@@ -262,7 +263,7 @@
               <p>
                 Extended a WooCommerce shop with product subscriptions, including custom back-end
                 tooling. The WordPress admin view surfaces subscription orders, key stats, and lets
-                staff manually cancel or adjust subscriptions without touching the database.
+                staff manually cancel or adjust subscriptions.
               </p>
               <div class="project-card__links">
                 <a href="https://www.naturalhemplife.se" target="_blank" rel="noreferrer">View site</a>
@@ -274,24 +275,24 @@
         <section id="capabilities" class="capabilities">
           <div class="section-heading">
             <p>Capabilities</p>
-            <h2>Custom WordPress engineering from theme to plugin</h2>
+            <h2>Custom WordPress engineering</h2>
           </div>
           <div class="capabilities__grid">
             <article class="capability-card">
               <h3>Theme & front-end architecture</h3>
-              <p>Clean, component-based themes and front-end that are easy to extend.</p>
+              <p>Clean, component-based themes and front-end that stay easy to extend.</p>
               <ul>
-                <li>Custom WordPress themes built with modern HTML/CSS and JS</li>
+                <li>Custom WordPress themes using modern HTML, CSS, and JS</li>
                 <li>Elementor Pro implementations that stay editable and performant</li>
                 <li>Reusable components instead of one-off page templates</li>
               </ul>
             </article>
             <article class="capability-card">
               <h3>Plugin & integration development</h3>
-              <p>Feature work in code: plugins, fields, and integrations instead of fragile hacks.</p>
+              <p>Feature work done in code—plugins, fields, and integrations instead of fragile hacks.</p>
               <ul>
                 <li>Custom plugins using WordPress APIs, hooks, and filters</li>
-                <li>ACF, Crocoblock, and WooCommerce customisation for real-world sites</li>
+                <li>ACF, Crocoblock, and WooCommerce customisation for live client projects</li>
                 <li>API integrations and data flows that fit existing stacks</li>
               </ul>
             </article>
@@ -325,8 +326,8 @@
               <p class="tag">Availability</p>
               <h2>Ready for collaborations at every scale</h2>
               <p>
-                Whether you're refreshing a CMS or launching a new brand chapter, I keep teams
-                aligned and deliver thoughtful, measurable builds.
+                Whether you're updating an existing site or starting from scratch, I deliver solid
+                WordPress builds and stay available for ongoing improvements.
               </p>
               <a class="cta" href="mailto:a.m.banaszak@icloud.com">Drop a note</a>
             </div>
@@ -338,5 +339,28 @@
         <p>© 2025 Aleksander — Crafted with ❤️ in 🇵🇱.</p>
       </footer>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const cards = document.querySelectorAll('.project-card');
+        if (!('IntersectionObserver' in window)) {
+          cards.forEach((card) => card.classList.add('project-card--visible'));
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('project-card--visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        cards.forEach((card) => observer.observe(card));
+      });
+    </script>
   </body>
 </html>

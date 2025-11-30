@@ -26,6 +26,32 @@ body.cv-body {
   align-items: center;
 }
 
+.cv-top-nav {
+  width: 210mm;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+
+.cv-top-nav__link {
+  font-size: 0.85rem;
+  color: var(--cv-text-light);
+  text-decoration: none;
+}
+
+.cv-top-nav__link:hover {
+  color: var(--cv-side-accent);
+}
+
+.cv-bottom-nav {
+  width: 210mm;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
 .cv-page {
   box-sizing: border-box;
   width: 210mm;
