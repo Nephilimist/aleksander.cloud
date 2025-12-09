@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reference — Aleksander Banaszak</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3H1BP8WWWQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3H1BP8WWWQ');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/references.css" />
+  </head>
+  <body class="ref-body">
+    <main class="ref-document">
+      <header class="ref-top-nav">
+        <a href="index.html" class="ref-top-nav__link">← Back to portfolio</a>
+      </header>
+
+      <section class="ref-page">
+        <section>
+          <header class="ref-header-main">
+            <div>
+              <h1 class="ref-name">Aleksander<br />Banaszak</h1>
+              <p class="ref-role">REFERENCE LETTER</p>
+            </div>
+            <div class="ref-logo">
+              <img src="assets/img/references/lions.svg" alt="Logo Lions Agency" srcset="">
+            </div>
+          </header>
+
+          <section class="ref-section ref-section--reference">
+            <h2 class="ref-section-title">Reference</h2>
+            <p class="ref-text">
+              I am pleased to recommend Aleksander as a highly capable and reliable Web Developer. Over the course of our collaboration, Aleksander has consistently demonstrated strong technical skills, ownership of his work, and a clear focus on delivering solutions that are both robust and practical.
+            </p>
+            <p class="ref-text">
+              Aleksander combines a deep understanding of WordPress (themes, plugins, and custom integrations) with solid front-end engineering skills in HTML, CSS and JavaScript. He is comfortable stepping into existing codebases, quickly understanding how things are structured, and then improving them without breaking what already works. From performance and Core Web Vitals to content modelling and custom functionalities, he approaches problems methodically and always communicates trade‑offs clearly.
+            </p>
+            <p class="ref-text">
+              What stands out most is Aleksander’s attitude. He is proactive, dependable, and easy to work with. He asks the right questions at the beginning of a project, keeps stakeholders informed as work progresses, and is calm and solution‑oriented when unexpected issues appear. He doesn’t just “code tasks”; he thinks in terms of the product and the business context behind every feature.
+            </p>
+            <p class="ref-text">
+              I would not hesitate to work with Aleksander again and can confidently recommend him for roles involving WordPress development, custom front‑end work, or broader web engineering responsibilities. Any team looking for a technically strong, thoughtful, and collaborative developer will benefit from having him on board.
+            </p>
+          </section>
+
+          <section class="ref-section ref-section--author">
+            <p class="ref-text ref-name">
+              <strong> Nataniel Łątka</strong>
+            </p>
+            <p class="ref-text">
+              <strong>CEO / Owner</strong>
+            </p>
+            <p class="ref-text">
+              hello@lions.agency
+            </p>
+          </section>
+        </section>
+      </section>
+
+      <div class="ref-bottom-nav">
+        <a href="index.html" class="ref-top-nav__link">← Back to live portfolio</a>
+      </div>
+
+      <a
+        class="ref-print-btn"
+        href="Aleksander-Banaszak_Reference.pdf"
+        download="Aleksander-Banaszak_Reference.pdf"
+        type="application/pdf"
+        id="reference-download-link"
+      >
+        Download reference PDF
+      </a>
+    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var downloadLink = document.getElementById('reference-download-link');
+        if (!downloadLink) return;
+
+        if (typeof gtag === 'function') {
+          downloadLink.addEventListener('click', function () {
+            gtag('event', 'reference_download', {
+              event_category: 'reference',
+              event_label: 'Aleksander-Banaszak_Reference.pdf',
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+  </html>

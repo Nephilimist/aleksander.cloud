@@ -26,6 +26,10 @@ body.cv-body {
   align-items: center;
 }
 
+.cv-page--reference {
+  grid-template-columns: 1fr;
+}
+
 .cv-top-nav {
   width: 210mm;
   max-width: 100%;
@@ -111,6 +115,15 @@ body.cv-body {
   font-size: 0.85rem;
   color: var(--cv-text-light);
   margin: 2px 0;
+}
+
+.cv-side-line a {
+  color: var(--cv-text-main);
+  text-decoration: none;
+}
+
+.cv-side-line a:hover {
+  text-decoration: underline;
 }
 
 .cv-side-list {

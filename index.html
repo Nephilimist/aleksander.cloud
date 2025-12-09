@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aleksander | Portfolio</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3H1BP8WWWQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3H1BP8WWWQ');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,6 +30,7 @@
           <nav class="hero__links">
             <a href="#projects">Projects</a>
             <a href="#capabilities">Capabilities</a>
+            <a href="#references">References</a>
             <a href="#cv">CV</a>
             <a href="#contact">Contact</a>
           </nav>
@@ -257,7 +267,7 @@
                 />
               </div>
               <div class="project-card__header">
-                <p class="project-card__meta">2024 · WooCommerce</p>
+                <p class="project-card__meta">2025 · WooCommerce</p>
                 <h3>Natural Hemp Life — subscriptions</h3>
               </div>
               <p>
@@ -308,6 +318,17 @@
           </div>
         </section>
 
+        <section id="references" class="cv-teaser">
+          <div class="cv-teaser__body">
+            <p class="tag">References</p>
+            <h2>What clients say about my work</h2>
+            <p>
+              Read a detailed reference letter describing how I work, communicate, and deliver WordPress projects in practice.
+            </p>
+            <a class="cta" href="references.html" target="_blank" rel="noreferrer">Open reference letter</a>
+          </div>
+        </section>
+
         <div class="bottom-panels">
           <section id="cv" class="cv-teaser">
             <div class="cv-teaser__body">
@@ -344,22 +365,41 @@
         const cards = document.querySelectorAll('.project-card');
         if (!('IntersectionObserver' in window)) {
           cards.forEach((card) => card.classList.add('project-card--visible'));
-          return;
+        } else {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('project-card--visible');
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.2 }
+          );
+
+          cards.forEach((card) => observer.observe(card));
         }
 
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('project-card--visible');
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.2 }
+        const trackedLinks = document.querySelectorAll(
+          'a.cta, nav.hero__links a, .project-card__links a'
         );
 
-        cards.forEach((card) => observer.observe(card));
+        trackedLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            if (typeof gtag === 'function') {
+              const label =
+                this.textContent.trim() ||
+                this.getAttribute('href') ||
+                'unknown';
+
+              gtag('event', 'click', {
+                event_category: 'button',
+                event_label: label,
+              });
+            }
+          });
+        });
       });
     </script>
   </body>

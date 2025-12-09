@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "export:cv": "node export-cv.js",
+    "export:reference": "node export-reference.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
