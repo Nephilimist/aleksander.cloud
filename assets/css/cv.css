@@ -253,6 +253,11 @@ body.cv-body {
     gap: 0;
   }
 
+  .cv-top-nav,
+  .cv-bottom-nav {
+    display: none;
+  }
+
   .cv-page {
     box-shadow: none;
   }

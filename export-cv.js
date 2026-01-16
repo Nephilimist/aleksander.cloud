@@ -19,8 +19,10 @@ async function main() {
     const fileUrl = `file://${cvHtmlPath}`;
 
     await page.goto(fileUrl, {
-      waitUntil: ['load', 'networkidle0'],
+      waitUntil: 'load',
+      timeout: 30000,
     });
+    await page.evaluate(() => (document.fonts ? document.fonts.ready : Promise.resolve()));
 
     await page.pdf({
       path: outputPath,
@@ -44,4 +46,3 @@ main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
-
