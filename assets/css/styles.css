@@ -399,3 +399,7 @@ html {
 .project-card p {
   display: none;
 }
+
+.project-card p.project-card__meta {
+  display: block;
+}
