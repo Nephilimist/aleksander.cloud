@@ -394,3 +394,8 @@ html {
     align-items: flex-start;
   }
 }
+
+
+.project-card p {
+  display: none;
+}
