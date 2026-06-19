@@ -248,6 +248,22 @@ html {
   line-height: 1.6;
 }
 
+.project-card ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.93rem;
+}
+
+.project-card ul li {
+  margin-bottom: 0.2rem;
+}
+
+.project-card ul li::marker {
+  color: var(--accent);
+}
+
 .project-card__media {
   margin-top: 18px;
   border-radius: 20px;

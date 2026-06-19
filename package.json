@@ -5,14 +5,25 @@
   "main": "index.js",
   "scripts": {
     "export:cv": "node export-cv.js",
+    "export:offer": "node export-offer.js",
+    "export:nikmet": "node export-nikmet-offer.js",
     "export:reference": "node export-reference.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx serve .",
+    "admin:server": "node admin/server/server.js",
+    "admin:client": "cd admin/client && npm run dev",
+    "admin": "concurrently \"npm run admin:server\" \"npm run admin:client\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "convert:avif": "node convert-to-avif.js",
+    "screenshot": "node screenshot.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "puppeteer": "^24.31.0"
+    "concurrently": "^10.0.0",
+    "puppeteer": "^25.1.0",
+    "serve": "^14.2.6",
+    "sharp": "^0.35.1"
   }
 }
