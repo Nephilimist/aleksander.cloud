@@ -139,6 +139,25 @@ async function shoot(page, url, filename) {
     await page.addStyleTag({ content: HIDE_CSS });
     await new Promise(r => setTimeout(r, 400));
 
+    // Forcefully remove known cookie elements from DOM to ensure they don't show up
+    await page.evaluate(() => {
+      const selectors = [
+        '#CybotCookiebotDialog', '#CybotCookiebotDialogBodyUnderlay',
+        '.CybotCookiebotFader', '#CybotCookiebotDialogTabContent',
+        '#onetrust-consent-sdk', '#onetrust-banner-sdk',
+        '[class*="cookie-bar"]', '[id*="cookie-bar"]',
+        '[class*="cookie-banner"]', '[id*="cookie-banner"]',
+        '[class*="cookie-notice"]', '[id*="cookie-notice"]',
+        '#cookie-law-info-bar'
+      ];
+      document.querySelectorAll(selectors.join(', ')).forEach(el => el.remove());
+      
+      // Attempt to remove any shadow root cookie banners if possible (Usercentrics etc)
+      const uc = document.querySelector('#usercentrics-root');
+      if (uc) uc.remove();
+    });
+    await new Promise(r => setTimeout(r, 400));
+
     // Scroll to top
     await page.evaluate(() => window.scrollTo(0, 0));
     await new Promise(r => setTimeout(r, 300));
