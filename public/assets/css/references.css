@@ -1,0 +1,188 @@
+:root {
+  --ref-font: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ref-bg: #05060f;
+  --ref-main-bg: #0d1021;
+  --ref-main-bg-soft: #05060f;
+  --ref-text-main: #ffffff;
+  --ref-text-light: rgba(245, 245, 255, 0.9);
+  --ref-accent: #a5ffcb;
+}
+
+body.ref-body {
+  margin: 0;
+  padding: 16px;
+  background: var(--ref-bg);
+  font-family: var(--ref-font);
+  color: var(--ref-text-main);
+}
+
+.ref-document {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.ref-top-nav,
+.ref-bottom-nav {
+  width: 210mm;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ref-top-nav {
+  margin-bottom: 8px;
+}
+
+.ref-bottom-nav {
+  margin-top: 8px;
+}
+
+.ref-top-nav__link {
+  font-size: 0.85rem;
+  color: var(--ref-text-light);
+  text-decoration: none;
+}
+
+.ref-top-nav__link:hover {
+  color: var(--ref-accent);
+}
+
+.ref-page {
+  box-sizing: border-box;
+  width: 210mm;
+  height: 297mm;
+  background: linear-gradient(135deg, var(--ref-main-bg) 0%, var(--ref-main-bg-soft) 100%);
+  box-shadow: 0 0 18px rgba(15, 23, 42, 0.45);
+  display: flex;
+  flex-direction: column;
+  padding: 22mm 18mm 20mm;
+  row-gap: 10mm;
+}
+
+.ref-page > section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ref-header-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-bottom: 2px solid var(--ref-accent);
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.ref-name {
+  font-size: 2.4rem;
+  line-height: 1.05;
+  margin: 0;
+  color: var(--ref-text-main);
+}
+
+.ref-role {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ref-text-main);
+}
+
+.ref-logo {
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.ref-section {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.ref-section-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ref-text-main);
+  margin: 0 0 4px;
+}
+
+.ref-text {
+  font-size: .9rem;
+  line-height: 1.6;
+  color: var(--ref-text-main);
+}
+
+.ref-section--author {
+  margin-top: auto;
+}
+
+/* Center the reference text block vertically, keeping heading at the top */
+.ref-section--reference {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ref-section--reference .ref-text:first-of-type {
+  margin-top: auto;
+}
+
+.ref-section--reference .ref-text:last-of-type {
+  margin-bottom: auto;
+}
+
+.ref-print-btn {
+  margin-top: 4px;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--ref-accent);
+  background: transparent;
+  color: var(--ref-text-light);
+  cursor: pointer;
+}
+
+.ref-print-btn:hover {
+  background: var(--ref-accent);
+  color: #ffffff;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body.ref-body {
+    padding: 0;
+    background: var(--ref-bg);
+  }
+
+  .ref-document {
+    gap: 0;
+  }
+
+  .ref-page {
+    box-shadow: none;
+    height: 297mm;
+    padding: 18mm 16mm 18mm;
+    page-break-after: avoid;
+  }
+
+  .ref-print-btn {
+    display: none;
+  }
+
+  .ref-top-nav,
+  .ref-bottom-nav {
+    display: none;
+  }
+}
+
+.ref-name {
+  font-size: 1.3rem;
+}

@@ -1,29 +1,26 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "export:cv": "node export-cv.js",
-    "export:offer": "node export-offer.js",
-    "export:nikmet": "node export-nikmet-offer.js",
-    "export:reference": "node export-reference.js",
-    "dev": "npx serve .",
-    "admin:server": "node admin/server/server.js",
-    "admin:client": "cd admin/client && npm run dev",
-    "admin": "concurrently \"npm run admin:server\" \"npm run admin:client\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "convert:avif": "node convert-to-avif.js",
-    "screenshot": "node screenshot.js"
+  "name": "portfolio-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "concurrently": "^10.0.0",
-    "puppeteer": "^25.1.0",
-    "serve": "^14.2.6",
-    "sharp": "^0.35.1"
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.18.2",
+    "lucide-react": "^1.26.0",
+    "puppeteer": "^25.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "3.4.19"
   }
 }

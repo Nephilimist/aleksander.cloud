@@ -1,0 +1,311 @@
+:root {
+  --offer-font: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --offer-bg: #05060f;
+  --offer-main-bg: #0d1021;
+  --offer-main-bg-soft: #05060f;
+  --offer-side-accent: #a5ffcb;
+  --offer-text-main: #ffffff;
+  --offer-text-light: rgba(245, 245, 255, 0.9);
+  --offer-text-muted: rgba(245, 245, 255, 0.7);
+  --offer-border: rgba(165, 255, 203, 0.2);
+}
+
+body.offer-body {
+  margin: 0;
+  padding: 16px;
+  background: var(--offer-bg);
+  font-family: var(--offer-font);
+  color: var(--offer-text-main);
+  line-height: 1.5;
+}
+
+.offer-document {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.offer-top-nav, .offer-bottom-nav {
+  width: 210mm;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.offer-top-nav__link {
+  font-size: 0.85rem;
+  color: var(--offer-text-light);
+  text-decoration: none;
+}
+
+.offer-top-nav__link:hover {
+  color: var(--offer-side-accent);
+}
+
+/* Updated to allow height to expand and handle multiple pages */
+.offer-page {
+  box-sizing: border-box;
+  width: 210mm;
+  min-height: 297mm;
+  background: linear-gradient(135deg, var(--offer-main-bg) 0%, var(--offer-main-bg-soft) 100%);
+  box-shadow: 0 0 18px rgba(15, 23, 42, 0.45);
+  position: relative;
+  overflow: visible;
+  padding: 0;
+  display: flex; /* Changed to flex to push content */
+  flex-direction: column;
+}
+
+.offer-main {
+  padding: 20mm 18mm;
+  color: var(--offer-text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex-grow: 1; /* Allow main content to grow */
+}
+
+.offer-header-main {
+  border-bottom: 2px solid var(--offer-side-accent);
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.offer-contact-header {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--offer-text-light);
+}
+
+.offer-contact-header p {
+  margin: 2px 0;
+}
+
+.offer-title {
+  font-size: 2.4rem;
+  line-height: 1.05;
+  margin: 0;
+  color: var(--offer-text-main);
+}
+
+.offer-subtitle {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--offer-side-accent);
+}
+
+.offer-section-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--offer-side-accent);
+  margin: 0 0 12px;
+  border-left: 3px solid var(--offer-side-accent);
+  padding-left: 12px;
+}
+
+.offer-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--offer-text-main);
+  margin: 0;
+}
+
+.offer-date {
+  font-size: 0.85rem;
+  color: var(--offer-text-muted);
+}
+
+.offer-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.offer-list-item h3 {
+  font-size: 0.95rem;
+  margin: 0 0 6px;
+  color: #ffffff;
+}
+
+.offer-list-item p {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--offer-text-muted);
+  margin: 0;
+}
+
+.offer-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.timeline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.step-num {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--offer-side-accent);
+  opacity: 0.6;
+  min-width: 35px;
+}
+
+.step-content strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.step-content p {
+  font-size: 0.85rem;
+  color: var(--offer-text-muted);
+  margin: 0;
+}
+
+.offer-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.offer-table th, .offer-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--offer-border);
+}
+
+.offer-table th {
+  color: var(--offer-side-accent);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.offer-table tfoot th, .offer-table tfoot td {
+  border-bottom: none;
+  border-top: 2px solid var(--offer-side-accent);
+  padding-top: 15px;
+  font-size: 1rem;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.footer-note {
+  margin-top: 20px;
+}
+
+.offer-print-btn {
+  margin: 20px 0;
+  padding: 0.7rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--offer-side-accent);
+  background: transparent;
+  color: var(--offer-side-accent);
+  cursor: pointer;
+  font-family: var(--offer-font);
+  transition: all 0.2s;
+}
+
+.offer-print-btn:hover {
+  background: var(--offer-side-accent);
+  color: #000;
+}
+
+@page {
+  size: A4;
+}
+@media print {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    /* Removed height: 100% as it breaks multi-page tables */
+  }
+
+  /* Fixed Background remains for full-bleed effect */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, var(--offer-main-bg) 0%, var(--offer-main-bg-soft) 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body.offer-body {
+    background: transparent !important;
+  }
+
+  .offer-print-layout {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent !important;
+    table-layout: fixed;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  tfoot {
+    display: table-footer-group !important;
+  }
+
+  .offer-print-spacer {
+    height: 25mm;
+    line-height: 25mm;
+  }
+...
+  .offer-document {
+    width: 100% !important;
+    display: block !important;
+  }
+  .offer-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    display: block !important;
+    min-height: auto !important;
+  }
+  .offer-main {
+    padding: 15mm !important; /* All margins: top, right, bottom, left */
+    display: block !important;
+  }
+  .offer-section {
+    page-break-inside: avoid;
+    margin-bottom: 25px;
+  }
+  .offer-top-nav, .offer-bottom-nav, .offer-print-btn {
+    display: none !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

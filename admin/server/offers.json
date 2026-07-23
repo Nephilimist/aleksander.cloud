@@ -1,0 +1,43 @@
+[
+  {
+    "id": "hernest-offer-optimized-2026",
+    "clientName": "Maria Ptaszkiewicz | hernest.estate",
+    "createdAt": "2026-06-08T12:00:00.000Z",
+    "proposal": "Poniżej przedstawiam propozycję optymalizacji i rozbudowy serwisu hernest.estate. Skupiamy się na wdrożeniu niezbędnych integracji oraz 5 kluczowych ulepszeń technicznych i wizerunkowych, które wpłyną na szybkość działania strony oraz konwersję.",
+    "scope": [
+      { "title": "Integracje i Compliance", "description": "Wdrożenie tokenu Sonar, integracja z ASARI, konfiguracja cookies oraz przygotowanie polityki prywatności." },
+      { "title": "Optymalizacja Core Web Vitals", "description": "Przyspieszenie LCP poprzez formaty WebP/AVIF i lazy loading – lepsze pozycje w Google." },
+      { "title": "Usprawnienia UX: Sticky CTA", "description": "Pływający pasek kontaktu na kartach ofert (Zadzwoń/Umów) zwiększający liczbę zapytań." },
+      { "title": "Dynamiczne Filtrowanie", "description": "Wyszukiwarka ofert działająca w czasie rzeczywistym bez przeładowania strony." },
+      { "title": "Social Proof & Landing Pages", "description": "Widget opinii Google/SonarHome oraz optymalizacja sekcji inwestycji pod kampanie leadowe." }
+    ],
+    "timeline": [
+      { "title": "Pełna realizacja", "description": "Wdrożenie wszystkich integracji i optymalizacji (1 dzień)" }
+    ],
+    "pricing": [
+      { "service": "Kompleksowa realizacja i optymalizacja", "scope": "Sonar, ASARI, Compliance + 5 usprawnień (UX/Speed)", "cost": "650" }
+    ],
+    "totalCost": "650"
+  },
+  {
+    "id": "nikmet-offer-2026",
+    "clientName": "Nikmet",
+    "createdAt": "2026-06-17T10:00:00.000Z",
+    "proposal": "W odpowiedzi na Państwa zapytanie, przygotowałem propozycję budowy nowej, responsywnej strony internetowej dla firmy Nikmet. Moim priorytetem jest połączenie solidnego, industrialnego wizerunku z maksymalną łatwością obsługi. Dostarczam system, w którym edycja tekstów, zdjęć i wpisów na blogu jest tak prosta jak w systemie WIX.",
+    "scope": [
+      { "title": "System WordPress 'No-Code'", "description": "Intuicyjny panel administracyjny oparty na WordPress, pozwalający na łatwe dodawanie treści, zdjęć i wpisów blogowych bez znajomości kodu." },
+      { "title": "Design Przemysłowy RWD", "description": "Nowoczesna, przejrzysta estetyka podkreślająca profesjonalizm firmy. Strona w pełni responsywna na smartfony i komputery." },
+      { "title": "Galeria Realizacji", "description": "Przejrzysta sekcja prezentująca wyroby metalowe, wyposażenie sklepowe i magazynowe z funkcją kategoryzacji." },
+      { "title": "Blog / Aktualności", "description": "Prosty moduł do publikacji aktualności firmowych, ułatwiający budowanie pozycji eksperta w branży." }
+    ],
+    "timeline": [
+      { "title": "Analiza & Projekt UI", "duration": "5 dni" },
+      { "title": "Development & CMS", "duration": "10 dni" },
+      { "title": "Testy & Launch", "duration": "2 dni" }
+    ],
+    "pricing": [
+      { "service": "Kompleksowa budowa strony z CMS", "scope": "Projekt UI, system 'No-Code', RWD, blog, galeria", "cost": "3500" }
+    ],
+    "totalCost": "3500"
+  }
+]

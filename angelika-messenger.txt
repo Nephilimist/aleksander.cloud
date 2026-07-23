@@ -1,0 +1,18 @@
+Cześć Angelika,
+
+sprawdziłem na szybko Twoją stronę za pomocą konsoli developerskiej. Problem faktycznie występuje na obu stronach – zarówno na głównej (niedziałający slider), jak i na podstronie produktu (brak ładowania bramek płatności w WooCommerce).
+
+Dobra informacja: to nie jest poważna awaria, tylko typowy "konflikt po optymalizacji", o którym wspominałem. W konsoli pojawiają się błędy takie jak:
+- `wp is not defined`
+- `_ is not defined`
+- `t.magnificPopup is not a function`
+
+Co to oznacza? Agencja SEO (lub zainstalowana wtyczka do optymalizacji prędkości) włączyła opcję "opóźniania" lub "asynchronicznego ładowania" skryptów JavaScript. W rezultacie fundamentalne biblioteki (jak jQuery czy pliki systemowe WordPressa) ładują się ZBYT PÓŹNO, a sklep i Elementor próbują z nich korzystać, zanim w ogóle zostaną wczytane. Stąd błąd API i niedziałający moduł.
+
+Odpowiadając na Twoje pytanie: 
+Tak, 1-2 godziny to w zupełności wystarczający czas, aby to naprawić. Nie musisz zamykać sklepu – naprawa będzie polegała na wykluczeniu z optymalizacji tych kilku krytycznych plików, tak by płatności i Elementor znów działały bez problemów. 
+
+Daj znać, czy mam się tym zająć, a prześlę szczegóły.
+
+Pozdrawiam,
+Aleksander Banaszak

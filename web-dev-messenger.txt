@@ -1,0 +1,16 @@
+Cześć,
+
+odpowiadam na ogłoszenie dotyczące stanowiska Web Developer UX/UI. Zajmuję się tworzeniem i utrzymaniem stron opartych na WordPressie, łącząc kodowanie z optymalizacją pod kątem konwersji (CRO) i wydajności.
+
+W kontekście Waszych wymagań:
+- mam doświadczenie z branżą regulowaną (tworzyłem strony m.in. dla branży medycznej),
+- dowożę projekty end-to-end: od projektowania UX/UI, przez czysty kod, aż po analitykę (GTM, GA4, Consent Mode, śledzenie zdarzeń),
+- optymalizuję pod kątem Core Web Vitals i zawsze testuję zmiany przed wdrożeniem na produkcję,
+- praca w Asanie i sprawna komunikacja to u mnie standard (wolę zapytać dwa razy, niż zgadywać).
+
+Moje portfolio z realizacjami znajdziesz tutaj: https://aleksander.cloud
+
+Szukam stabilnej współpracy B2B, więc Wasz model bardzo mi odpowiada. Dajcie znać, kiedy mielibyście czas na krótką rozmowę zapoznawczą.
+
+Pozdrawiam,
+Aleksander Banaszak

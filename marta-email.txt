@@ -1,0 +1,35 @@
+Dzień dobry Pani Marto,
+
+w nawiązaniu do ogłoszenia dotyczącego budowy nowej strony internetowej (wraz z modułem sklepu e-commerce) dla firmy z branży OZE oraz HVAC, chciałbym zaproponować swoje usługi. Tworzę od podstaw nowoczesne, wysoce zoptymalizowane pod SEO strony na WordPressie ze sklepami WooCommerce.
+
+W załączniku przesyłam wstępną, spersonalizowaną wycenę (plik PDF) ze szczegółami, poniżej natomiast odpowiadam bezpośrednio na wszystkie Pani pytania:
+
+1. Przykładowe 3 realizacje (branża techniczna / nowoczesne technologie / instalacje):
+- https://przyklad1.pl (tu proszę uzupełnić lub mogę podesłać moje: np. https://aleksander.cloud)
+- https://przyklad2.pl
+- https://przyklad3.pl
+
+2. Zakres w cenie:
+Cena podana w załączniku pokrywa wszystko, o co Pani prosiła: 
+- Indywidualny projekt strony.
+- Implementacja i konfiguracja środowiska WordPress z rozsądnym e-commerce MVP na silniku WooCommerce.
+- Dedykowana ekspozycja modułu "Realizacje" oraz formularze wycen usług.
+- Wdrożenie przygotowanych treści na stronę główną i podstrony usług (fotowoltaika, pompy, klimatyzacja, folie itp.).
+- Ustawienie polityki prywatności/regulaminów i baneru ciasteczek.
+- W pełni działające lokalne SEO (techniczna struktura nagłówków, geolokalizacja).
+- Przekazanie dostępów administratorskich wraz z umową.
+
+3. Termin wdrożenia:
+Biorąc pod uwagę zakres prac (wizytówka + rozbudowane portfolio + MVP sklepu), termin realizacji wynosi od 17 do 23 dni roboczych, po dostarczeniu przez Państwa kompletu materiałów (logo, treści).
+
+4. Teksty i optymalizacja SEO:
+Tak, wykonuję podstawową i zaawansowaną optymalizację SEO (technical + on-page). Co do pisania tekstów z punktu widzenia copywritingu (content writing) pod SEO - mogę się tym zająć za dodatkową opłatą, w stałej współpracy z copywriterem, jeśli nie dysponują Państwo swoimi tekstami. Wdrożenie Państwa gotowych tekstów jest całkowicie DARMOWE i zawarte w cenie projektu.
+
+5. Model rozliczenia i wsparcia po uruchomieniu:
+- Rozliczenie następuje na podstawie faktury na zasadzie zaliczki (50% przed startem projektu, 50% po pełnym wdrożeniu, akceptacji strony i przeniesieniu na Państwa hosting). Z uwagi na prowadzoną działalność, nie doliczam podatku VAT.
+- Wsparcie: W cenie zapewniam szkolenie (online/nagranie instruktażowe) z edycji strony, samodzielnego wstawiania nowych wpisów czy produktów w WooCommerce. Dodatkowo zapewniam miesięczny darmowy okres opieki technicznej (poprawki, kopie zapasowe). Po tym czasie możliwa jest stała współpraca administracyjna.
+
+Będę wdzięczny za odpowiedź czy moja wycena (dołączona w pliku) wpisuje się w Państwa budżet i czy możemy umówić się na 15-minutową, niezobowiązującą rozmowę telefoniczną, aby uściślić wizję i detale MVP sklepu.
+
+Z poważaniem,
+Aleksander Banaszak

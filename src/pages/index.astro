@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import ProjectsGrid from '../components/ProjectsGrid.astro';
+import Skills from '../components/Skills.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Aleksander Banaszak - Senior Web Developer & WordPress Specialist">
+  <Navbar />
+  <main>
+    <Hero />
+    <ProjectsGrid />
+    <Skills />
+
+    <!-- Formularz kontaktowy z integracją z Discordem -->
+    <section id="kontakt" class="py-28 bg-[#08080c] border-b border-white/5">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center space-y-4 mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400">Kontakt & Zapytania</h2>
+          <p class="text-3xl sm:text-5xl font-black uppercase italic tracking-tighter text-white">
+            Napisz do mnie
+          </p>
+          <p class="text-sm text-white/60 font-medium max-w-lg mx-auto">
+            Planujesz wdrożenie nowego serwisu, potrzebujesz dedykowanego motywu WordPress lub wsparcia w rozwoju aplikacji?
+          </p>
+        </div>
+
+        <form id="contact-form" class="space-y-6 bg-[#11111c] border border-white/10 p-8 sm:p-12 rounded-[2.5rem] shadow-2xl">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label for="name" class="block text-xs font-bold uppercase tracking-widest text-white/70">Imię i Nazwisko / Firma</label>
+              <input type="text" id="name" name="name" required class="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 text-sm focus:outline-none focus:border-indigo-500 transition-colors" placeholder="Jan Kowalski" />
+            </div>
+
+            <div class="space-y-2">
+              <label for="email" class="block text-xs font-bold uppercase tracking-widest text-white/70">Adres E-mail</label>
+              <input type="email" id="email" name="email" required class="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 text-sm focus:outline-none focus:border-indigo-500 transition-colors" placeholder="jan@example.com" />
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label for="subject" class="block text-xs font-bold uppercase tracking-widest text-white/70">Temat rozmowy</label>
+            <input type="text" id="subject" name="subject" class="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 text-sm focus:outline-none focus:border-indigo-500 transition-colors" placeholder="Nowy sklep WooCommerce / Strona internetowa" />
+          </div>
+
+          <div class="space-y-2">
+            <label for="message" class="block text-xs font-bold uppercase tracking-widest text-white/70">Wiadomość</label>
+            <textarea id="message" name="message" rows="5" required class="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 text-sm focus:outline-none focus:border-indigo-500 transition-colors" placeholder="Opisz krótko swój projekt..."></textarea>
+          </div>
+
+          <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-black text-xs uppercase tracking-widest hover:opacity-90 transition-opacity shadow-lg shadow-indigo-500/25">
+            Wyślij Wiadomość
+          </button>
+          
+          <div id="form-status" class="hidden text-center text-xs font-bold uppercase tracking-widest p-4 rounded-xl"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <Footer />
+
+  <script>
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const formStatus = document.getElementById('form-status') as HTMLDivElement;
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'WYSYŁANIE...';
+
+      const formData = new FormData(form);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
+      };
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+          formStatus.innerText = 'Dziękuję! Wiadomość została wysłana.';
+          formStatus.className = 'text-center text-xs font-bold uppercase tracking-widest p-4 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
+          form.reset();
+        } else {
+          throw new Error('Błąd wysyłania');
+        }
+      } catch (err) {
+        formStatus.innerText = 'Wystąpił błąd. Napisz bezpośrednio na: a.m.banaszak@icloud.com';
+        formStatus.className = 'text-center text-xs font-bold uppercase tracking-widest p-4 rounded-xl bg-rose-500/10 text-rose-400 border border-rose-500/20';
+      } finally {
+        formStatus.classList.remove('hidden');
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'WYŚLIJ WIADOMOŚĆ';
+      }
+    });
+  </script>
+</Layout>

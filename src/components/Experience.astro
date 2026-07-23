@@ -1,0 +1,59 @@
+---
+const jobs = [
+  {
+    role: "WordPress Developer",
+    company: "Heydigital",
+    location: "Trójmiasto, Polska (Zdalnie)",
+    period: "09.2025 - obecnie",
+    description: "Tworzenie autorskich motywów i wtyczek WordPress, optymalizacja Core Web Vitals oraz integracje API."
+  },
+  {
+    role: "Web Developer",
+    company: "Lions Agency",
+    location: "Kraków",
+    period: "01.2024 - 09.2025",
+    description: "Kompleksowe wdrożenia serwisów www, dedykowane moduły oraz stała obsługa klientów agencji."
+  },
+  {
+    role: "WordPress Developer",
+    company: "leverage.it",
+    location: "Ontario, Kanada - Zdalnie",
+    period: "10.2022 - 12.2023",
+    description: "Programowanie motywów na podstawie projektów z Figma/XD dla zagranicznych klientów."
+  },
+  {
+    role: "Head of Digital",
+    company: "AdWise Group",
+    location: "Warszawa",
+    period: "02.2018 - 09.2025",
+    description: "Nadzór nad projektami cyfrowymi oraz zarządzanie zespołem programistów i marketerów."
+  }
+];
+---
+<section id="doswiadczenie" class="py-28 bg-[#08080c] border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-16">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">Kariera & Doświadczenie</h2>
+      <p class="text-3xl sm:text-5xl font-black uppercase italic tracking-tighter text-white">
+        Historia Zatrudnienia
+      </p>
+    </div>
+
+    <div class="space-y-6 max-w-4xl">
+      {jobs.map((job) => (
+        <div class="p-8 sm:p-10 rounded-[2.5rem] bg-[#11111c] border border-white/10 space-y-4 hover:border-indigo-500/40 transition-colors">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <h3 class="text-xl font-black uppercase italic text-white">{job.role}</h3>
+              <p class="text-xs font-bold text-indigo-400 mt-1">{job.company} - {job.location}</p>
+            </div>
+            <span class="px-4 py-1.5 rounded-full bg-white/5 text-white/50 text-xs font-bold w-fit">
+              {job.period}
+            </span>
+          </div>
+          <p class="text-sm text-white/70 font-medium leading-relaxed">{job.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

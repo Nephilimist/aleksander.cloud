@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d16" />
+      <stop offset="100%" stop-color="#050508" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Container -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="8" />
+
+  <!-- Letter A Monogram -->
+  <g filter="url(#glow)">
+    <!-- Left diagonal stem -->
+    <path d="M 180 370 L 256 150 L 290 150 L 220 370 Z" fill="url(#brandGrad)" />
+    <!-- Right diagonal stem -->
+    <path d="M 256 150 L 332 370 L 292 370 L 230 190 Z" fill="url(#brandGrad)" />
+    <!-- Crossbar -->
+    <rect x="200" y="280" width="105" height="30" rx="8" fill="url(#brandGrad)" />
+    <!-- Accent Dot -->
+    <circle cx="345" cy="355" r="18" fill="#6366f1" />
+  </g>
+</svg>

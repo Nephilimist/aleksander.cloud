@@ -1,26 +1,5 @@
-estelio-fix.css
-
-# Private Offer Files (Local Only)
-offer.html
-offer-*.html
-oferta-*.html
-oferta_*.pdf
-Oferta_*.pdf
-Meeting_Prep_*.md
-Umowa_*.md
-wellness-email.txt
-export-*-offer.js
-export-offer.js
-take-ambio-screenshot.js
-sonar_widget_demo.html
-admin/
-
-# Assets related to offers
-assets/css/offer.css
-
-# OS files
-.DS_Store
-
-# Node
 node_modules/
-package-lock.json
+dist/
+chrome/
+.DS_Store
+*.log
