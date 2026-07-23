@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="CV - Aleksander Banaszak">
-  <div class="max-w-5xl mx-auto px-4 py-8 no-print-padding">
-    <div class="mb-8 flex justify-between items-center">
+  <div class="max-w-5xl mx-auto px-4 py-4 no-print-padding">
+    <div class="no-print mb-6 flex justify-between items-center">
       <a href="/" class="text-xs font-bold uppercase tracking-widest text-indigo-400 hover:underline">← Powrót do Portfolio</a>
       <a href="/Aleksander-Banaszak_CV.pdf" download="Aleksander-Banaszak_CV.pdf" class="px-6 py-2.5 rounded-full bg-indigo-600 text-white text-xs font-bold uppercase tracking-widest hover:bg-indigo-500 transition-colors shadow-lg flex items-center space-x-2">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -15,20 +15,20 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <!-- CV Container -->
-    <div class="bg-[#11111c] border border-white/10 rounded-[2rem] p-8 sm:p-12 shadow-2xl text-white space-y-12">
+    <div class="bg-[#11111c] border border-white/10 rounded-[2rem] p-6 sm:p-10 shadow-2xl text-white space-y-6">
       
       <!-- Layout Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
         
         <!-- Left Sidebar -->
-        <aside class="md:col-span-4 space-y-8 border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0 md:pr-8">
-          <div class="w-36 h-36 rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow-lg mx-auto md:mx-0">
+        <aside class="md:col-span-4 space-y-6 border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-6">
+          <div class="w-32 h-32 rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow-lg mx-auto md:mx-0">
             <img src="/assets/aleksander.png" alt="Aleksander Banaszak" class="w-full h-full object-cover" />
           </div>
 
-          <div class="space-y-3">
-            <h2 class="text-xs font-black uppercase tracking-widest text-indigo-400 border-b border-indigo-500/30 pb-2">Kontakt</h2>
-            <div class="text-xs space-y-1.5 text-white/70 font-medium">
+          <div class="space-y-2">
+            <h2 class="text-[11px] font-black uppercase tracking-widest text-indigo-400 border-b border-indigo-500/30 pb-1.5">Kontakt</h2>
+            <div class="text-[11px] space-y-1 text-white/70 font-medium">
               <p><strong class="text-white">E-mail:</strong> a.m.banaszak@icloud.com</p>
               <p><strong class="text-white">Telefon:</strong> +48 881 548 644</p>
               <p><strong class="text-white">Lokalizacja:</strong> Warszawa, Polska</p>
@@ -36,9 +36,9 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <div class="space-y-3">
-            <h2 class="text-xs font-black uppercase tracking-widest text-indigo-400 border-b border-indigo-500/30 pb-2">Umiejętności</h2>
-            <ul class="text-xs space-y-2 text-white/70 font-medium list-disc pl-4">
+          <div class="space-y-2">
+            <h2 class="text-[11px] font-black uppercase tracking-widest text-indigo-400 border-b border-indigo-500/30 pb-1.5">Umiejętności</h2>
+            <ul class="text-[11px] space-y-1.5 text-white/70 font-medium list-disc pl-3.5 leading-snug">
               <li>PHP (8.x) / Dedykowana logika backendowa</li>
               <li>JavaScript (ES6+) / TypeScript / React / Astro</li>
               <li>Autorskie motywy HTML5 i CSS3 (TailwindCSS)</li>
@@ -58,97 +58,95 @@ import Layout from '../layouts/Layout.astro';
         </aside>
 
         <!-- Main Column -->
-        <main class="md:col-span-8 space-y-10">
-          <header class="border-b border-white/10 pb-6">
-            <h1 class="text-4xl font-black uppercase italic tracking-tight text-white">Aleksander<br />Banaszak</h1>
-            <p class="text-xs font-bold uppercase tracking-widest text-indigo-400 mt-2">Web Developer & WordPress Specialist</p>
+        <main class="md:col-span-8 space-y-6">
+          <header class="border-b border-white/10 pb-4">
+            <h1 class="text-3xl font-black uppercase italic tracking-tight text-white leading-none">Aleksander Banaszak</h1>
+            <p class="text-[11px] font-bold uppercase tracking-widest text-indigo-400 mt-1.5">Web Developer & WordPress Specialist</p>
           </header>
 
           <!-- Podsumowanie -->
-          <section class="space-y-3">
-            <h2 class="text-xs font-black uppercase tracking-widest text-indigo-400 border-b border-indigo-500/30 pb-2">Podsumowanie zawodowe</h2>
-            <p class="text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
-              Programista stron internetowych ukierunkowany na obszar Full-Stack z dużym doświadczeniem w ekosystemie WordPress oraz tworzeniu autorskich motywów i wtyczek. Buduję szybkie, responsywne interfejsy i przekładam projekty graficzne na czysty, łatwy w utrzymaniu kod. Sprawnie wchodzę w istniejące projekty, diagnozuję i rozwiązuję trudne problemy oraz optymalizuję wydajność tam, gdzie ma to kluczowe znaczenie. Dbam o najwyższą jakość UX i kodu, swobodnie łącząc zadania po stronie front-endu oraz serwera.
+          <section class="space-y-2">
+            <h2 class="text-[11px] font-black uppercase tracking-widest text-indigo-400 border-b border-indigo-500/30 pb-1.5">Podsumowanie zawodowe</h2>
+            <p class="text-[11px] sm:text-xs text-white/80 leading-relaxed font-medium">
+              Programista stron internetowych ukierunkowany na obszar Full-Stack z dużym doświadczeniem w ekosystemie WordPress oraz tworzeniu autorskich motywów i wtyczek. Buduję szybkie, responsywne interfejsy i przekładam projekty graficzne na czysty, łatwy w utrzymaniu kod. Sprawnie wchodzę w istniejące projekty, diagnozuję i rozwiązuję trudne problemy oraz optymalizuję wydajność tam, gdzie ma to kluczowe znaczenie.
             </p>
           </section>
 
           <!-- Doświadczenie Zawodowe -->
-          <section class="space-y-8">
-            <h2 class="text-xs font-black uppercase tracking-widest text-indigo-400 border-b border-indigo-500/30 pb-2">Doświadczenie zawodowe</h2>
+          <section class="space-y-5">
+            <h2 class="text-[11px] font-black uppercase tracking-widest text-indigo-400 border-b border-indigo-500/30 pb-1.5">Doświadczenie zawodowe</h2>
 
-            <article class="space-y-3">
-              <div class="flex justify-between items-start flex-wrap gap-2">
+            <article class="space-y-1.5">
+              <div class="flex justify-between items-start flex-wrap gap-1">
                 <div>
-                  <h3 class="text-sm font-black uppercase italic text-white">WORDPRESS DEVELOPER</h3>
-                  <p class="text-xs font-bold text-indigo-300">Heydigital</p>
+                  <h3 class="text-xs font-black uppercase italic text-white">WORDPRESS DEVELOPER</h3>
+                  <p class="text-[10px] font-bold text-indigo-300">Heydigital</p>
                 </div>
-                <div class="text-right text-xs text-white/50 font-medium">
+                <div class="text-right text-[10px] text-white/50 font-medium">
                   <p>09.2025 - obecnie</p>
                   <p>Trójmiasto, Polska (Zdalnie)</p>
                 </div>
               </div>
-              <ul class="text-xs text-white/70 space-y-1.5 list-disc pl-4 font-medium">
+              <ul class="text-[10px] text-white/70 space-y-1 list-disc pl-3.5 font-medium leading-snug">
                 <li>Tworzenie nowoczesnych, wydajnych stron WordPress z autorskimi motywami i wtyczkami dopasowanymi do wymagań projektu.</li>
                 <li>Przekładanie systemów designu na responsywne, pikselowo dopracowane układy przy użyciu HTML, CSS, JavaScript i PHP.</li>
                 <li>Tworzenie zaawansowanych funkcji oraz integracja z zewnętrznymi interfejsami API.</li>
-                <li>Optymalizacja wydajności oraz utrzymywanie wysokiej jakości kodu poprzez przeglądy, testy i iteracyjny refaktoring.</li>
+                <li>Optymalizacja wydajności oraz utrzymywanie wysokiej jakości kodu poprzez przeglądy i refaktoring.</li>
               </ul>
             </article>
 
-            <article class="space-y-3">
-              <div class="flex justify-between items-start flex-wrap gap-2">
+            <article class="space-y-1.5">
+              <div class="flex justify-between items-start flex-wrap gap-1">
                 <div>
-                  <h3 class="text-sm font-black uppercase italic text-white">WEB DEVELOPER</h3>
-                  <p class="text-xs font-bold text-indigo-300">Lions Agency</p>
+                  <h3 class="text-xs font-black uppercase italic text-white">WEB DEVELOPER</h3>
+                  <p class="text-[10px] font-bold text-indigo-300">Lions Agency</p>
                 </div>
-                <div class="text-right text-xs text-white/50 font-medium">
+                <div class="text-right text-[10px] text-white/50 font-medium">
                   <p>01.2024 - 09.2025</p>
                   <p>Kraków, Polska</p>
                 </div>
               </div>
-              <ul class="text-xs text-white/70 space-y-1.5 list-disc pl-4 font-medium">
+              <ul class="text-[10px] text-white/70 space-y-1 list-disc pl-3.5 font-medium leading-snug">
                 <li>Dostarczanie kompletnych serwisów WordPress oraz stały rozwój istniejących projektów dla klientów agencji.</li>
-                <li>Tworzenie dedykowanych motywów i wtyczek oraz wdrażanie zaawansowanych funkcjonalności dostosowanych do celów biznesowych.</li>
-                <li>Budowanie podstron w oparciu o Elementor Pro i precyzyjne przekształcanie projektów graficznych w responsywne układy.</li>
-                <li>Obsługa debugowania, optymalizacja wydajności, usprawnienia UX/UI, integracje wtyczek oraz obsługa techniczna serwisu.</li>
+                <li>Tworzenie dedykowanych motywów i wtyczek oraz wdrażanie zaawansowanych funkcjonalności biznesowych.</li>
+                <li>Budowanie podstron w oparciu o Elementor Pro i precyzyjne przekształcanie projektów graficznych w układy www.</li>
+                <li>Obsługa debugowania, optymalizacja wydajności, usprawnienia UX/UI oraz obsługa techniczna serwisów.</li>
               </ul>
             </article>
 
-            <article class="space-y-3">
-              <div class="flex justify-between items-start flex-wrap gap-2">
+            <article class="space-y-1.5">
+              <div class="flex justify-between items-start flex-wrap gap-1">
                 <div>
-                  <h3 class="text-sm font-black uppercase italic text-white">WORDPRESS DEVELOPER</h3>
-                  <p class="text-xs font-bold text-indigo-300">leverage.it</p>
+                  <h3 class="text-xs font-black uppercase italic text-white">WORDPRESS DEVELOPER</h3>
+                  <p class="text-[10px] font-bold text-indigo-300">leverage.it</p>
                 </div>
-                <div class="text-right text-xs text-white/50 font-medium">
+                <div class="text-right text-[10px] text-white/50 font-medium">
                   <p>10.2022 - 12.2023</p>
                   <p>Ontario, Kanada (Zdalnie)</p>
                 </div>
               </div>
-              <ul class="text-xs text-white/70 space-y-1.5 list-disc pl-4 font-medium">
+              <ul class="text-[10px] text-white/70 space-y-1 list-disc pl-3.5 font-medium leading-snug">
                 <li>Realizacja nowych wdrożeń WordPress oraz bieżący rozwój stron dla międzynarodowych klientów.</li>
                 <li>Budowanie autorskich motywów i funkcji z zachowaniem pełnej zgodności z makietami Figma / Adobe XD.</li>
                 <li>Dostarczanie wysokiej jakości interfejsów ukierunkowanych na szybkość działania i niezawodność.</li>
-                <li>Prowadzenie iteracyjnych ulepszeń, integracji wtyczek oraz refaktoringu w celu utrzymania skalowalności rozwiązań.</li>
               </ul>
             </article>
 
-            <article class="space-y-3">
-              <div class="flex justify-between items-start flex-wrap gap-2">
+            <article class="space-y-1.5">
+              <div class="flex justify-between items-start flex-wrap gap-1">
                 <div>
-                  <h3 class="text-sm font-black uppercase italic text-white">HEAD OF DIGITAL</h3>
-                  <p class="text-xs font-bold text-indigo-300">AdWise Group</p>
+                  <h3 class="text-xs font-black uppercase italic text-white">HEAD OF DIGITAL</h3>
+                  <p class="text-[10px] font-bold text-indigo-300">AdWise Group</p>
                 </div>
-                <div class="text-right text-xs text-white/50 font-medium">
+                <div class="text-right text-[10px] text-white/50 font-medium">
                   <p>02.2018 - 09.2025</p>
                   <p>Warszawa, Polska</p>
                 </div>
               </div>
-              <ul class="text-xs text-white/70 space-y-1.5 list-disc pl-4 font-medium">
+              <ul class="text-[10px] text-white/70 space-y-1 list-disc pl-3.5 font-medium leading-snug">
                 <li>Zarządzanie projektami digitalowymi od strategii i planowania po egzekucję kampanii i optymalizację wyników.</li>
-                <li>Pełnienie roli partnera doradczego dla klientów, łącząc cele biznesowe z rozwiązaniami w e-commerce i technologii.</li>
+                <li>Pełnienie roli partnera doradczego dla klientów, łącząc cele biznesowe z rozwiązaniami technologicznymi.</li>
                 <li>Kierowanie zespołem specjalistów oraz mentoring, zapewniający terminową realizację projektów.</li>
-                <li>Opracowywanie rekomendacji strategicznych w oparciu o dane i potrzeby klientów agencji.</li>
               </ul>
             </article>
 
