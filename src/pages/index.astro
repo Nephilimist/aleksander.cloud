@@ -7,14 +7,14 @@ import Skills from '../components/Skills.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Aleksander Banaszak - Senior Web Developer & WordPress Specialist">
+<Layout title="Aleksander Banaszak - Web Developer & WordPress Specialist">
   <Navbar />
   <main>
     <Hero />
     <ProjectsGrid />
     <Skills />
 
-    <!-- Formularz kontaktowy z integracją z Discordem -->
+    <!-- Formularz kontaktowy z bezpośrednią integracją Discord Webhook -->
     <section id="kontakt" class="py-28 bg-[#08080c] border-b border-white/5">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center space-y-4 mb-16">
@@ -66,27 +66,43 @@ import Footer from '../components/Footer.astro';
     const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
     const formStatus = document.getElementById('form-status') as HTMLDivElement;
 
+    const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1529842007785078979/fwmCqayaiUj_BOiODdJ883jBFRMETZBBG9D_DJE6GvjD9uxwH7WnMalbZrV9O5FOk7AX';
+
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
       submitBtn.disabled = true;
       submitBtn.innerText = 'WYSYŁANIE...';
 
       const formData = new FormData(form);
-      const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        subject: formData.get('subject'),
-        message: formData.get('message')
+      const name = String(formData.get('name') || '');
+      const email = String(formData.get('email') || '');
+      const subject = String(formData.get('subject') || 'Brak tematu');
+      const message = String(formData.get('message') || '');
+
+      const payload = {
+        embeds: [
+          {
+            title: '📬 Nowa wiadomość z Portfolio (aleksander.cloud)',
+            color: 0x6366f1,
+            fields: [
+              { name: '👤 Nadawca', value: name, inline: true },
+              { name: '📧 E-mail', value: email, inline: true },
+              { name: '📌 Temat', value: subject, inline: false },
+              { name: '💬 Wiadomość', value: message, inline: false }
+            ],
+            timestamp: new Date().toISOString()
+          }
+        ]
       };
 
       try {
-        const response = await fetch('/api/contact', {
+        const response = await fetch(DISCORD_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
+          body: JSON.stringify(payload)
         });
 
-        if (response.ok) {
+        if (response.ok || response.status === 204) {
           formStatus.innerText = 'Dziękuję! Wiadomość została wysłana.';
           formStatus.className = 'text-center text-xs font-bold uppercase tracking-widest p-4 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
           form.reset();
